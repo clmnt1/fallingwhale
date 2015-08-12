@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Otari";
+    src: url('../fonts/Otari-Bold-Limited.otf');
+}
+
+/*RESET CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Otari", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    background: #A1BA94;
+}
+
+/*DEPTH*/
+.depth0 {
+    z-index: 0;
+}
+.depth1 {
+    z-index: 10;
+}
+.depth2 {
+    z-index: 100;
+}
+.depth3 {
+    z-index: 200;
+}
+.depth4 {
+    z-index: 300;
+}
+.depth5 {
+    z-index: 400;
+}
+.depth6 {
+    z-index: 500;
+}
+
+/*TITLE*/
+.title {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+.title h1 {
+    transform:translate(-50%, -50%);
+    font-size: 90px;
+    color: #424344;
+}
+
+/*SCROLL*/
+.scroll-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.layer {
+    position: fixed;
+}
+.cloud {
+    position: absolute;
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+}
+
+/*CONTENT*/
+.main {
+
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1450px;
+    /*background: #2D2020;*/
+}
+
+/*GROUND*/
+.ground-container {
+    position: absolute;
+    bottom: 446px;
+}
+.ground {
+    position: absolute;
+    bottom: 0;
+}
+
+/*OBJECTS*/
+.whale {
+    position: fixed;
+    opacity: 0;
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+}
+
+.whale.displayed {
+    opacity: 1;
+    -webkit-animation: whale-bounce 15s ease infinite; animation: whale-bounce 15s ease infinite;
+}
+
+/*WHALE ANIMATION*/
+@keyframes whale-bounce {
+    0% {
+        -webkit-transform: translateY(-45%);
+        -moz-transform: translateY(-45%);
+        -ms-transform: translateY(-45%);
+        -o-transform: translateY(-45%);
+        transform: translateY(-45%);
+    }
+    25% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    50% {
+        -webkit-transform: translateY(45%);
+        -moz-transform: translateY(45%);
+        -ms-transform: translateY(45%);
+        -o-transform: translateY(45%);
+        transform: translateY(45%);
+    }
+    75% {
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    100% {
+        -webkit-transform: translateY(-45%);
+        -moz-transform: translateY(-45%);
+        -ms-transform: translateY(-45%);
+        -o-transform: translateY(-45%);
+        transform: translateY(-45%);
+    }
+}
